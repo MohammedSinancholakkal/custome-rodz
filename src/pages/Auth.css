@@ -1,0 +1,119 @@
+/* Auth.css */
+.login-container {
+  margin: 0;
+  padding: 0;
+  background: url('https://cdn.vectorstock.com/i/500p/49/98/motocross-rider-silhouette-vector-45484998.jpg') no-repeat center center/cover;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .login-form {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgb(255, 255, 255);
+    padding: 40px 30px;
+    width: 380px; /* Increased width */
+    border-radius: 15px; /* Slightly more rounded */
+    text-align: center;
+  }
+  
+  .login-form h2 {
+    margin-bottom: 30px;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .login-form label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-size: 12px;
+    color: white;
+    letter-spacing: 1px;
+  }
+  
+  .login-form input[type="text"],
+  .login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.998);
+    background: transparent;
+    color: white;
+    outline: none;
+    border-radius: 8px; /* Rounded corners for inputs */
+  }
+  
+  .login-form input::placeholder {
+    color: rgb(255, 255, 255);
+  }
+  
+  .login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    margin-bottom: 15px;
+    color: white;
+  }
+  
+  .login-options input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .forgot-link {
+    color: #ddd;
+    text-decoration: none;
+  }
+  
+  .forgot-link:hover {
+    text-decoration: underline;
+  }
+  
+  .login-form button {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
+    cursor: pointer;
+    letter-spacing: 1px;
+    border-radius: 8px; /* Rounded corners for button */
+  }
+  
+  .login-form button:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .signup-text {
+    margin-top: 15px;
+    font-size: 12px;
+    color: white;
+  }
+  
+  .signup-text a {
+    color: #ddd;
+    text-decoration: none;
+  }
+  
+  .signup-text a:hover {
+    text-decoration: underline;
+  }
+
+
+  .login-text{
+    text-decoration: none;
+  }
+  
+  

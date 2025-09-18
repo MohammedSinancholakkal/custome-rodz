@@ -1,0 +1,43 @@
+
+
+/* Section styling */
+.joinus-section {
+  position: relative;
+  background: url("https://images.unsplash.com/photo-1517677208171-0bc6725a3e60") no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Dark overlay for readability */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100vh;
+  padding: 60px 20px;
+}
+
+/* Text content */
+.joinus-content {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+}
+
+.joinus-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.joinus-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.joinus-content p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}

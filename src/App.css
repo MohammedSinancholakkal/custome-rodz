@@ -1,0 +1,979 @@
+/* header section */
+.header-title {
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+  height: 40px;
+  color: #e6f1f4; /* Bootstrap text-info */
+  letter-spacing: 3px;
+  margin-left: 10px;
+  animation: blueGlowScale 3s infinite alternate;
+}
+
+@keyframes blueGlowScale {
+  0% {
+    transform: scale(1.1);
+    text-shadow: 0 0 5px #1e90ff, 0 0 10px #1e90ff, 0 0 20px #4682b4;
+  }
+  100% {
+    transform: scale(1.1);
+    text-shadow: 0 0 15px #00bfff, 0 0 30px #1e90ff, 0 0 45px #87ceeb;
+  }
+}
+
+/* Style for Navbar links */
+/* Apply styles to all nav-links except wishlist & cart */
+.navbar-nav .nav-link:not(.wishlist):not(.cart) {
+  position: relative;
+  color: white !important;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  padding-bottom: 5px; /* Reserve space for underline */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Underline effect */
+.navbar-nav .nav-link:not(.wishlist):not(.cart)::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;   /* align underline properly */
+  left: 0;
+  background-color: #dde0e3;
+  transition: width 0.4s ease;
+}
+
+.navbar-nav .nav-link:not(.wishlist):not(.cart):hover::after {
+  width: 100%;
+}
+
+/* Smooth hover effect */
+.navbar-nav .nav-link:not(.wishlist):not(.cart):hover {
+  color: #f8f9fa !important;
+  transform: scale(1.05); /* zoom instead of jump */
+}
+
+/* Wishlist & Cart icons */
+.navbar-nav .nav-link.wishlist,
+.navbar-nav .nav-link.cart {
+  color: #e2e9eb !important;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.navbar-nav .nav-link.wishlist:hover,
+.navbar-nav .nav-link.cart:hover {
+  transform: scale(1.2);
+}
+
+
+/* top header */
+
+.topbar {
+  background: linear-gradient(to top,#004080, #081e35); /* blue glossy look */
+  height: 35px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.topbar-nav {
+  display: flex;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-left: auto; /* pushes right on desktop */
+}
+
+.topbar-nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.topbar-nav a {
+  color: #e2e9eb; /* bootstrap text-info color */
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+  display: inline-block; /* required so transform works properly */
+}
+
+.topbar-nav a:hover {
+  color: #cd1717; /* slightly darker shade on hover */
+  transform: scale(1.1); /* zoom effect */
+}
+.topbar-nav span {
+  color: white;
+  opacity: 0.8;
+}
+
+/* Responsive: center on mobile */
+@media (max-width: 768px) {
+  .topbar {
+    justify-content: center;
+  }
+  .topbar-nav {
+    margin-left: 0; /* remove right alignment */
+  }
+}
+
+/* Header.css or App.css */
+
+/* carousil section */
+
+.carousel-img {
+  height: 500px;          /* Slightly taller on desktop */
+  object-fit: cover;      /* Prevent stretching */
+}
+
+@media (max-width: 992px) {
+  .carousel-img {
+    height: 400px;        /* Medium screens (tablets) */
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-img {
+    height: 300px;        /* Mobile */
+  }
+
+  .carousel-caption h3 {
+    font-size: 1.2rem;    /* Smaller heading */
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem;    /* Smaller text */
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-img {
+    height: 250px;        /* Very small devices */
+  }
+
+  .carousel-caption {
+    bottom: 10px;         /* Move caption lower */
+    padding: 0 10px;
+  }
+
+  .carousel-caption h3 {
+    font-size: 2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* testimonials  */
+
+.testimonial-card {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.testimonial-card.active {
+  transform: scale(1.09) translateY(-15px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4) !important;
+  z-index: 3;
+  bottom: 10px;
+}
+
+
+
+
+
+
+
+/* service.sectionn */
+.service-1{
+    width: 100%;
+    height: 500px;
+}
+
+
+/* customised care for all your needs */
+.features {
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: #fff;
+}
+
+.features-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.feature-item img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 1rem;
+}
+
+
+
+/* book now section */
+
+.service-container {
+  padding: 2rem;
+  background: #fff;
+}
+
+.service-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.service-image {
+  flex: 1 1 100px;
+}
+
+.service-image img {
+    /* max-width: 500px; */
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.service-text {
+  flex: 1 1 5px;
+}
+
+.service-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.service-text p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.service-features {
+  display: grid;
+  grid-template-columns: 0.4fr 0.4fr ;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1e40af; /* Blue text */
+    font-size: 0.95rem;
+}
+.feature-item img{
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5rem;
+}
+
+
+
+/* Button styling */
+.book-btn {
+  
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.book-btn:hover {
+  background-color: #1a3794;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-content {
+    flex-direction: column;
+  }
+
+  .service-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* testimonials */
+
+@media (max-width: 576px) {
+  .table td,
+  .table th {
+    font-size: 14px;
+    padding: 0.5rem;
+  }
+}
+
+
+
+
+
+
+/* Heart bounce animation */
+/* Heart bounce animation */
+.bounce {
+  animation: bounceUp 0.7s ease;
+  color: #dc3545 !important; /* force red during animation */
+}
+
+@keyframes bounceUp {
+  0%   { transform: scale(1) translateY(0); }
+  25%  { transform: scale(1.5) translateY(-20px); } /* higher jump */
+  50%  { transform: scale(0.9) translateY(-10px); }
+  75%  { transform: scale(1.2) translateY(-15px); }
+  100% { transform: scale(1) translateY(0); }
+}
+
+
+
+
+
+/* ---------- Home Card ---------- */
+.home-card {
+  width: 220px;
+  margin: 10px auto;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff; /* optional for better look */
+  display: flex;
+  flex-direction: column;
+}
+
+.home-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.home-card .card-content {
+  padding: 10px;
+}
+
+.home-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.home-card:hover img {
+  transform: scale(1.05);
+}
+
+/* ---------- Accessory Card ---------- */
+.accessory-card {
+  width: 220px;
+  margin: 10px auto;
+  opacity: 0;
+  transform: translateX(100px);
+  border-radius: 1rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  will-change: transform, box-shadow, opacity;
+}
+
+.accessory-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.accessory-card .card-content {
+  padding: 10px;
+}
+
+.accessory-card.visible {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.accessory-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 123, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ---------- Mobile Responsiveness ---------- */
+@media (max-width: 768px) {
+  .home-card,
+  .accessory-card {
+    width: 100%;             /* full screen width */
+    max-width: 100%;         /* no max constraint */
+    margin: 10px 0;          /* vertical spacing */
+    border-radius: 8px;
+  }
+
+  .home-card img,
+  .accessory-card img {
+    height: 200px;           /* slightly taller for mobile */
+    object-fit: cover;
+  }
+
+  .home-card .card-content,
+  .accessory-card .card-content {
+    padding: 12px;
+    text-align: center;      /* better on mobile */
+  }
+
+  /* Remove hover effects for mobile */
+  .home-card:hover,
+  .accessory-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+
+
+/* .accessory-card.visible:nth-child(1) { transition-delay: 0s; }
+.accessory-card.visible:nth-child(2) { transition-delay: 0.2s; }
+.accessory-card.visible:nth-child(3) { transition-delay: 0.4s; }
+.accessory-card.visible:nth-child(4) { transition-delay: 0.6s; } */
+
+
+
+
+
+
+
+/* displayhome search */
+
+.search-input {
+  border-radius: 5px;
+  font-weight: bold;
+  transition: border-radius 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  border-radius: 20px;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+
+
+
+
+
+
+/* Footer.css */
+.footer a {
+  transition: all 0.3s ease;
+}
+.footer a:hover {
+  opacity: 0.8;
+}
+
+
+
+
+
+/* Hover zoom effect for testimonial cards */
+.testimonial-card {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05); /* Zoom in */
+  box-shadow: 0 20px 40px rgba(0, 123, 255, 0.3); /* Add shadow on hover */
+  z-index: 10; /* Make hovered card appear on top */
+}
+
+
+.testimonial-marquee {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.testimonial-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 10s linear infinite; /* Adjust speed here */
+}
+
+/* Each card */
+.testimonial-item {
+  flex: 0 0 auto;
+  margin-right: 20px;
+  width: 350px; /* Adjust card width */
+}
+
+/* Pause animation on hover */
+.testimonial-marquee:hover .testimonial-track {
+  animation-play-state: paused;
+}
+
+/* Keyframes for scrolling */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Half width (since we doubled items) */
+  }
+}
+
+.testimonial-section {
+  background-color: #111;
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
+}
+
+.testimonial-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.testimonial-card {
+  background-color: #1d1d1d;
+  padding: 30px 20px;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+}
+
+.quote-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-top: -40px;
+  object-fit: cover;
+  border: 3px solid white;
+}
+
+.role {
+  display: inline-block;
+  background: #444;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+/* Tablet: 2 per row */
+@media (max-width: 992px) {
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: 1 per row */
+@media (max-width: 600px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.testimonial-section {
+  background: #111;
+  color: #fff;
+  padding: 60px 0;
+  position: relative;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.slider-controls {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.arrow-btn {
+  background: #333;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  border-radius: 50%;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.arrow-btn:hover {
+  background: #555;
+}
+
+.testimonial-card {
+  background: #222;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  height: 100%;
+}
+
+.quote-mark {
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.05);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: -40px;
+  border: 4px solid #111;
+}
+
+.name {
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.role {
+  background: #555;
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin: 10px 0;
+}
+
+.text {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+
+/* Add padding inside each slide */
+.testimonial-slide {
+  padding: 0 15px; /* Adjust gap here */
+}
+
+/* Compensate padding so slider doesn't get extra space on the sides */
+.slick-list {
+  margin: 0 -15px;
+}
+
+/* Keep your existing styles */
+.testimonial-card {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.quote-mark {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.testimonial-img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.testimony-message.clamped {
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* show only 4 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.testimony-message.expanded {
+  display: block; /* show full text */
+}
+
+
+
+
+/* products */
+/* Category list */
+.category-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  margin-bottom: 10px; /* merged from .sidebar .category-list li */
+}
+
+.category-list li:hover {
+  color: #d9534f;
+}
+
+/* Sidebar */
+@media (min-width: 768px) {
+  .sidebar {
+    position: sticky;
+    top: 80px; /* adjust based on your navbar height */
+    align-self: flex-start;
+  }
+}
+
+/* Product card */
+.product-card {
+  max-width: 220px;
+  margin: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.product-card img {
+  height: 130px;
+  object-fit: contain;
+  padding: 8px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.product-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Category badge */
+.category-badge {
+  display: inline-block;
+  color: #000000;
+  border-radius: 5px;
+  padding: 2px 6px;
+  font-weight: bolder;
+  font-size: 0.75rem;
+  margin-bottom: 4px;
+}
+
+/* Carousel image */
+.carousel-img {
+  max-height: 400px;
+  object-fit: cover;
+}
+
+
+
+
+
+
+/* banner */
+
+
+/* Back button default (fixed for larger screens) */
+.back-btn {
+  position: fixed;
+  top: 150px;
+  left: 20px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0);
+  z-index: 1050; /* ensure it’s above other elements */
+}
+
+/* On small screens, make it relative so it appears above content */
+@media (max-width: 767.98px) {
+  .back-btn {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+}
+
+
+
+
+/* booked */
+
+.booked-container {
+  min-height: 100vh;
+  padding: 20px;
+  color: white;
+}
+
+.tab-card {
+  background: white;
+  color: black;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  min-width: 200px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.tab-card:hover {
+  transform: scale(1.05);
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+
+
+
+/* password eye */
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px; /* leave space for the eye icon */
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;   /* stick to right */
+  top: 35%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+  font-size: 20px;
+  color: white;
+}
+
+
+/* spinner login */
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.537); /* dim background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* slow spinner (10s per rotation) */
+
+.slow-spin {
+  animation: spin 1s linear infinite;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+
+
+/* service book service */
+
+/* Service Section - Mobile Responsiveness */
+@media (max-width: 768px) {
+  .service-content {
+    display: flex;
+    flex-direction: column;  /* stack image and text vertically */
+    align-items: center;     /* center everything */
+    text-align: center;      /* center text */
+  }
+
+  .service-text {
+    width: 95%;              /* almost full width */
+    margin: 10px 0;
+  }
+
+  .service-image img {
+    width: 100%;             /* full width image */
+    height: auto;            /* maintain aspect ratio */
+  }
+
+  .book-btn {
+    width: 100%;             /* full width button */
+    max-width: 400px;        /* optional max-width to avoid being too wide */
+    padding: 12px 20px;      /* make it a bit taller */
+    margin-top: 15px;
+  }
+
+  .service-features .feature-item {
+    flex-direction: column;  /* stack icon and text vertically */
+    align-items: center;
+    text-align: center;
+  }
+
+  .service-features .feature-item img {
+    margin-bottom: 5px;
+  }
+}

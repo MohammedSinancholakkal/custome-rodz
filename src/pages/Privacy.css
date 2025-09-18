@@ -1,0 +1,22 @@
+.privacy-section {
+    position: relative;
+    min-height: 100vh;
+    background: url("https://sccgroup.in/wp-content/uploads/2025/07/privacy-policy-banner.webp") no-repeat center center/cover;
+  }
+  
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6); /* dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .privacy-content {
+    color: white;
+    max-width: 800px;
+    padding: 40px;
+    text-align: left;
+  }
+  

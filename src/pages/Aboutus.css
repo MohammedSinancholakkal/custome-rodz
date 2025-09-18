@@ -1,0 +1,83 @@
+/* Fullscreen hero section */
+.about-section {
+    position: relative;
+    height: 90vh;
+    background: url("https://images.unsplash.com/photo-1636761358757-0a616eb9e17e?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW90b3JjeWNsZSUyMHdvcmtzaG9wfGVufDB8fDB8fHww")
+      no-repeat center center/cover;
+  }
+  
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .about-content {
+    color: white;
+    max-width: 700px;
+    padding: 40px;
+    margin-left: 5%;
+  }
+  
+  .about-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .about-content h3 {
+    font-size: 1.5rem;
+    margin: 10px 0 20px;
+    font-weight: 400;
+  }
+  
+  .about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+  }
+  
+  /* History Section */
+  .history-section {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+  }
+  
+  .history-content {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .history-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .history-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: #555;
+  }
+  
+  .experience-box {
+    display: inline-block;
+    background: #ff6600;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  
+  .experience-box h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .experience-box p {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  

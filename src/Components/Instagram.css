@@ -1,0 +1,140 @@
+.instagram-feed {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    justify-content: center; 
+    padding: 20px;
+    background: #fafafa;
+  }
+  
+  /* Each card */
+  .instagram-card {
+    background: #fff;
+    border-radius: 15px;
+    border: 1px solid #e6e6e6; /* Instagram-like border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 0 1 30%; 
+    max-width: 30%;
+  }
+  
+  .instagram-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Header */
+  .card-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  
+  .instagram-logo {
+    font-size: 1.5rem;
+    color: #E1306C;
+    margin-right: 10px;
+  }
+  
+  .username {
+    font-weight: bold;
+    color: #262626;
+  }
+  
+  /* Main Image */
+  .card-image {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card-image img {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #e6e6e6;
+    transition: transform 0.3s ease;
+  }
+  
+  .instagram-card:hover .card-image img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  /* Footer */
+  .card-footer {
+    padding: 10px 15px;
+  }
+  
+  .actions {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .actions i {
+    font-size: 1.4rem;
+    margin-right: 15px;
+    cursor: pointer;
+    color: #262626;
+    transition: color 0.2s ease;
+  }
+  
+  .actions i:hover {
+    color: #E1306C; /* Instagram pink hover */
+  }
+  
+  /* Caption */
+  .caption {
+    font-size: 0.95rem;
+    color: #262626;
+    line-height: 1.4;
+  }
+  
+  .caption .username {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 992px) {
+    .instagram-card {
+      flex: 0 1 45%;
+      max-width: 45%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .instagram-card {
+      flex: 0 1 100%;
+      max-width: 100%;
+    }
+  }
+  /* Main Image - decreased height */
+.card-image img {
+    width: 100%;
+    height: 250px; /* Decreased height */
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #e6e6e6;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Action buttons with white background, black outline */
+  .actions i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #262626;
+    background-color: #fff; /* white background */
+    border: 1px solid #000; /* black outline */
+    border-radius: 50%;
+    padding: 6px;
+    transition: all 0.2s ease;
+  }
+  
+  .actions i:hover {
+    color: #E1306C; /* pink hover */
+    transform: scale(1.1); /* slight zoom on hover */
+  }
+  
+  

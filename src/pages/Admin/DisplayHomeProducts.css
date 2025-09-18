@@ -1,0 +1,33 @@
+/* Card hover effect */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    max-width: 220px; /* increased width */
+    margin: auto;
+}
+
+.card-hover:hover {
+    transform: scale(1.03); /* subtle scale */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* slightly softer shadow */
+}
+
+/* Image hover effect */
+.card-hover img {
+    transition: transform 0.3s ease;
+    height: 150px; /* slightly taller image */
+}
+
+.card-hover:hover img {
+    transform: scale(1.06); /* subtle image scale */
+}
+/* Sticky sidebar only on md+ screens */
+@media (max-width: 767.98px) {
+    aside {
+      position: static !important; /* Disable sticky on mobile */
+      top: auto !important;
+      height: auto !important;
+      margin-bottom: 20px;
+    }
+  }
+  
+  
